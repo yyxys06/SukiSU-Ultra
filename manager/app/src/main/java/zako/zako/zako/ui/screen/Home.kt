@@ -142,6 +142,7 @@ fun HomeScreen(navigator: DestinationsNavigator) {
                 WarningCard(message = "zakozako 不支持你的设备")
                 return@Column
             }
+
             val isManager = Natives.becomeManager(ksuApp.packageName)
             val ksuVersion = if (isManager) Natives.version else null
             val lkmMode = ksuVersion?.let {
